@@ -1,13 +1,12 @@
-package com.example.demo.lambda;
+package com.example.lambda;
 
 
+import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.Stream;
-
-import org.junit.Test;
 
 public class RedHot {
 

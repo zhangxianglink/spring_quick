@@ -1,28 +1,24 @@
 package easyexcel;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import com.alibaba.excel.EasyExcelFactory;
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.alibaba.excel.metadata.Table;
 import com.alibaba.excel.support.ExcelTypeEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Using {
 
@@ -31,7 +27,6 @@ public class Using {
 	/*
 	 * 简易版,依赖定好的数据模型
 	 */
-	@Test
 	public void writeExcel() {
 		try (FileOutputStream out = new FileOutputStream("C:\\Users\\Administrator\\Desktop\\easyexcel\\first.xlsx");) {
 			ExcelWriter writer = EasyExcelFactory.getWriter(out);
@@ -57,7 +52,6 @@ public class Using {
 	/**
 	 * 动态生成模型
 	 */
-	@Test
 	public void writeExcel2() {
 		try (FileOutputStream out = new FileOutputStream(
 				"C:\\Users\\Administrator\\Desktop\\easyexcel\\second.xlsx");) {
@@ -96,7 +90,6 @@ public class Using {
 	/**
 	 * 无java模型读取,excel解析的每行结果以List<String>返回 在ExcelListener获取解析结果
 	 */
-	@Test
 	public void readExcel() {
 		try (InputStream in = new FileInputStream(
 				"C:\\\\Users\\\\Administrator\\\\Desktop\\\\easyexcel\\\\first.xlsx");) {
@@ -111,7 +104,6 @@ public class Using {
 	/**
 	 * 读取时剔除了表头
 	 */
-	@Test
 	public void readExcel2() {
 		try (InputStream in = new FileInputStream(
 				"C:\\\\Users\\\\Administrator\\\\Desktop\\\\easyexcel\\\\first.xlsx");) {

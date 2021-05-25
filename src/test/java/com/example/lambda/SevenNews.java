@@ -1,6 +1,7 @@
-package com.example.demo.lambda;
+package com.example.lambda;
 
 
+import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,8 +22,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import org.junit.Test;
 
 /**
  * 

@@ -1,14 +1,12 @@
-package com.example.demo.lambda;
+package com.example.lambda;
+
+import org.apache.commons.compress.utils.Lists;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
-
-import org.apache.commons.compress.utils.Lists;
-import org.apache.poi.hpsf.Array;
-import org.junit.Test;
 
 /*
  * 延迟执行

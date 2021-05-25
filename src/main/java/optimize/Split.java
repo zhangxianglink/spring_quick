@@ -5,8 +5,6 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import org.junit.Test;
-
 public class Split {
 	
 	public String getString() {
@@ -22,7 +20,6 @@ public class Split {
 	/**
 	 * split方法分割字符串, 性能太慢,
 	 */
-	@Test
 	public void test1() {
 		String str = getString();
 		Instant now = Instant.now();
@@ -40,7 +37,6 @@ public class Split {
 	/**
 	 * 效率更高的StringTokenizer
 	 */
-	@Test
 	public void test2() {
 		String str = getString();
 		StringTokenizer tokenizer = new StringTokenizer(str, ".");
@@ -62,7 +58,6 @@ public class Split {
 	/**
 	 * 自定义分割法,核心indexof(), substring时间换空间
 	 */
-	@Test
 	public void test3() {
 		String string = getString();
 		String str = string;
